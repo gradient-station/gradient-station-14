@@ -294,6 +294,15 @@
           1
         ]
       ]
+    },
+    {
+      "name": "grille",
+      "directions": 1,
+      "delays": [
+        [
+          1
+        ]
+      ]
     }
   ]
 }

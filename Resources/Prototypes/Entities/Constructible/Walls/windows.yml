@@ -1,5 +1,5 @@
 ﻿- type: entity
-  id: Window
+  id: Window1
   name: window
   description: Don't smudge up the glass down there.
   placement:
@@ -51,7 +51,7 @@
     - type: WindowVisualizer
 
 - type: entity
-  id: ReinforcedWindow
+  id: ReinforcedWindow2
   name: reinforced window
   parent: Window
   components:
@@ -113,3 +113,84 @@
   - /Audio/Effects/glass_break1.ogg
   - /Audio/Effects/glass_break2.ogg
   - /Audio/Effects/glass_break3.ogg
+
+### TG WINDOWS
+
+- type: entity
+  id: Window
+  name: window
+  description: Don't smudge up the glass down there.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: Clickable
+  - type: RCDDeconstructWhitelist
+  - type: InteractionOutline
+  - type: Sprite
+    netsync: false
+    drawdepth: WallTops
+    sprite: Constructible/Structures/Windows/glass.rsi
+  - type: Icon
+    sprite: Constructible/Structures/Windows/glass.rsi
+    state: full
+  - type: Physics
+    shapes:
+    - !type:PhysShapeAabb
+      layer:
+      - Impassable
+      - MobImpassable
+      - VaultImpassable
+      - SmallImpassable
+  - type: Damageable
+    resistances: metallicResistances
+  - type: Destructible
+    thresholds:
+      15:
+        SoundCollection: WindowBreak
+        Spawn:
+          ShardGlass:
+            Min: 1
+            Max: 2
+        Acts: ["Destruction"]
+  - type: SnapGrid
+    offset: Center
+  - type: Airtight
+  - type: Window
+    base: glass
+    maxDamage: 15
+#  - type: Construction
+#    graph: window
+#    node: window
+  - type: Appearance
+    visuals:
+    - type: WindowVisualizer
+
+- type: entity
+  id: ReinforcedWindow
+  name: reinforced window
+  parent: Window
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: Constructible/Structures/Windows/rglass.rsi
+  - type: Icon
+    sprite: Constructible/Structures/Windows/rglass.rsi
+  - type: Damageable
+    resistances: metallicResistances
+  - type: Destructible
+    thresholds:
+      75:
+        SoundCollection: WindowBreak
+        Spawn:
+          ShardGlassReinforced:
+            Min: 1
+            Max: 2
+        Acts: ["Destruction"]
+  - type: Window
+    base: rglass
+    maxDamage: 75
+#  - type: Construction
+#    graph: window
+#    node: reinforcedWindow
