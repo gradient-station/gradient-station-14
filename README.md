@@ -1,29 +1,20 @@
-<p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
+<p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/Sweptstation/space-station-14/master/github-logo.png" /></p>
 
-Space Station 14 is a revived attempt at an SS13 remake.
+Sweptstation is a fork of [Space Station 14](https://github.com/space-wizards/space-station-14/). There's no real plans for significant overhauls of gameplay systems or the like, it's mostly alternate sprites and content/balance tweaking.
 
-This is the primary repo for Space Station 14. To prevent people forking RobustToolbox, a "content" pack is loaded by the client and server. This content pack contains everything needed to play the game on one specific server.
+## Links
 
-If you want to host or create content for SS14, this is the repo you need. Contains both RobustToolbox and the content pack for development of new content packs.
-
-## Getting in Touch
-
-* Website: [spacestation14.io](https://spacestation14.io/)
-* Discord: [Invite Link](https://discord.gg/t2jac3p)
-* IRC: `irc.rizon.net#spacebus`
-* Automatic Content Builds: [builds.spacestation14.io](https://builds.spacestation14.io/jenkins)
-
-The IRC is setup to relay back and forth to the Discord server so [IRC nerds](https://xkcd.com/1782/) will not be left out.
+[Discord](https://discord.gg/EVWKnraZZN) | [SS14 Discord](https://discord.gg/MwDDf6t) | [RobustToolbox](https://github.com/space-wizards/RobustToolbox) | [Sprite Dump](https://github.com/space-wizards/rsi-dump)
 
 ## Documentation
 
-We have various documentation articles about various systems on both content pack and engine on HackMD wiki.
+Just use SS14s documentation.
 
 * [Robust Toolbox & Space Station 14 HackMD Wiki](https://hackmd.io/@ss14/docs/)
 
 ## Contributing
 
-We are happy to accept contributions from anybody. Get in Discord or IRC if you want to help. We've got a [list of issues](https://github.com/space-wizards/space-station-14-content/issues) that need to be done and anybody can pick them up. Don't be afraid to ask for help either!
+Contributions are fine, but if it's ANYTHING that can help Space Station 14 as a whole, (Bug fixes, major gameplay systems, patches) please direct them to the [upstream repository](https://github.com/space-wizards/space-station-14/). Get in the discord if you want to help/yell at Swept. If you're looking for sprites, I usually dump stuff in SS14's rsi-dump.
 
 ## Building
 
