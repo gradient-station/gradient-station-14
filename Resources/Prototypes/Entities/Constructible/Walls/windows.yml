@@ -157,9 +157,12 @@
   - type: SnapGrid
     offset: Center
   - type: Airtight
-  - type: Window
+#  - type: Window
+#    base: glass
+#    maxDamage: 15
+  - type: IconSmooth
+    key: full
     base: glass
-    maxDamage: 15
 #  - type: Construction
 #    graph: window
 #    node: window
@@ -188,9 +191,12 @@
             Min: 1
             Max: 2
         Acts: ["Destruction"]
-  - type: Window
+#  - type: Window
+#    base: rglass
+#    maxDamage: 75
+  - type: IconSmooth
+    key: base
     base: rglass
-    maxDamage: 75
 #  - type: Construction
 #    graph: window
 #    node: reinforcedWindow

@@ -1,7 +1,7 @@
 - type: entity
   id: LowWall
-  name: low wall
-  description: Goes up to about your waist.
+  name: grille
+  description:
   placement:
     mode: SnapgridCenter
     snap:
@@ -13,12 +13,12 @@
   - type: InteractionOutline
   - type: Sprite
     netsync: false
-    color: "#889192"
     drawdepth: Walls
-    sprite: Constructible/Structures/Walls/low_wall.rsi
+    sprite: Constructible/Structures/Walls/solid.rsi
+    state: grille
   - type: Icon
-    sprite: Constructible/Structures/Walls/low_wall.rsi
-    state: metal
+    sprite: Constructible/Structures/Walls/solid.rsi
+    state: grille
   - type: Physics
     shapes:
     - !type:PhysShapeAabb
@@ -35,20 +35,16 @@
     node: start
   - type: SnapGrid
     offset: Center
-  - type: Climbable
-  - type: LowWall
-    key: walls
-    base: metal_
-  - type: Construction
-    graph: lowWall
-    node: lowWall
+#  - type: Construction
+#    graph: lowWall
+#    node: lowWall
 
-- type: entity
-  id: LowWallOverlay
-  name: low wall overlay
-  abstract: true
-  components:
-  - type: Sprite
-    color: "#889192"
-    drawdepth: WallMountedItems
-    sprite: Constructible/Structures/Walls/low_wall.rsi
+#- type: entity
+#  id: LowWallOverlay
+#  name: low wall overlay
+#  abstract: true
+#  components:
+#  - type: Sprite
+#    color: "#889192"
+#    drawdepth: WallMountedItems
+#    sprite: Constructible/Structures/Walls/low_wall.rsi
