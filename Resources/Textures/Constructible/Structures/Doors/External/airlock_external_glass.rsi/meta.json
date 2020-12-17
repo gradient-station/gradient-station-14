@@ -8,10 +8,6 @@
   },
   "states": [
     {
-      "name": "bolted",
-      "directions": 1
-    },
-    {
       "name": "closed",
       "directions": 1
     },
@@ -24,12 +20,12 @@
       "directions": 1,
       "delays": [
         [
+          0.2,
+          0.2,
           0.1,
           0.1,
-          0.07,
-          0.07,
-          0.07,
-          0.2
+          0.1,
+          0.3
         ]
       ]
     },
@@ -38,17 +34,86 @@
       "directions": 1,
       "delays": [
         [
-          0.1,
-          0.1,
-          0.07,
-          0.07,
-          0.07,
-          0.2
+          0.6,
         ]
       ]
     },
     {
       "name": "deny",
+      "directions": 1,
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "bolted",
+      "directions": 1
+    },
+    {
+      "name": "panel_closing",
+      "directions": 1,
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "panel_opening",
+      "directions": 1,
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "open",
+      "directions": 1
+    },
+    {
+      "name": "opening",
+      "directions": 1,
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "opening_unlit",
+      "directions": 1,
+      "delays": [
+        [
+          0.2,
+        ]
+      ]
+    },
+    {
+      "name": "panel_open",
+      "directions": 1
+    },
+    {
+      "name": "sparks",
       "directions": 1,
       "delays": [
         [
@@ -62,75 +127,10 @@
       ]
     },
     {
-      "name": "open",
-      "directions": 1
-    },
-    {
-      "name": "opening",
-      "directions": 1,
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.07,
-          0.07,
-          0.07,
-          0.2
-        ]
-      ]
-    },
-    {
-      "name": "opening_unlit",
-      "directions": 1,
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.07,
-          0.07,
-          0.07,
-          0.2
-        ]
-      ]
-    },
-    {
-      "name": "panel_closing",
-      "directions": 1,
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.07,
-          0.07,
-          0.07,
-          0.2
-        ]
-      ]
-    },
-    {
-      "name": "panel_open",
-      "directions": 1
-    },
-    {
-      "name": "panel_opening",
-      "directions": 1,
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.07,
-          0.07,
-          0.07,
-          0.2
-        ]
-      ]
-    },
-    {
       "name": "sparks_broken",
       "directions": 1,
       "delays": [
         [
-          0.1,
           0.1,
           0.1,
           0.1,
@@ -149,7 +149,6 @@
           0.1,
           0.1,
           0.1,
-          0.1,
           1.7
         ]
       ]
@@ -159,7 +158,6 @@
       "directions": 1,
       "delays": [
         [
-          0.1,
           0.1,
           0.1,
           0.1,
