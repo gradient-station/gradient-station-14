@@ -9,7 +9,7 @@
   - type: Sprite
     netsync: false
     drawdepth: Mobs # They're on the same layer as mobs, perspective.
-    sprite: Constructible/Structures/Doors/airlock_basic.rsi
+    sprite: Constructible/Structures/Doors/Internal/airlock_basic.rsi
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
@@ -83,4 +83,4 @@
   name: maintenance hatch
   components:
   - type: Sprite
-    sprite: Constructible/Structures/Doors/airlock_maint.rsi
+    sprite: Constructible/Structures/Doors/Internal/airlock_maint.rsi

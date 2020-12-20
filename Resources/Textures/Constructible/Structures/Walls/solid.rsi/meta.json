@@ -9,38 +9,56 @@
   "states": [
     {
       "name": "full",
+      "select": [],
+      "flags": {},
       "directions": 1
     },
     {
       "name": "solid0",
+      "select": [],
+      "flags": {},
       "directions": 4
     },
     {
       "name": "solid1",
+      "select": [],
+      "flags": {},
       "directions": 4
     },
     {
       "name": "solid2",
+      "select": [],
+      "flags": {},
       "directions": 4
     },
     {
       "name": "solid3",
+      "select": [],
+      "flags": {},
       "directions": 4
     },
     {
       "name": "solid4",
+      "select": [],
+      "flags": {},
       "directions": 4
     },
     {
       "name": "solid5",
+      "select": [],
+      "flags": {},
       "directions": 4
     },
     {
       "name": "solid6",
+      "select": [],
+      "flags": {},
       "directions": 4
     },
     {
       "name": "solid7",
+      "select": [],
+      "flags": {},
       "directions": 4
     },
     {
@@ -99,24 +117,6 @@
     },
     {
       "name": "reinf_cult",
-      "directions": 1,
-      "delays": [
-        [
-          1
-        ]
-      ]
-    },
-    {
-      "name": "reinf_metal",
-      "directions": 1,
-      "delays": [
-        [
-          1
-        ]
-      ]
-    },
-    {
-      "name": "reinf_over",
       "directions": 1,
       "delays": [
         [
@@ -278,6 +278,15 @@
       ]
     },
     {
+      "name": "reinforced_wall_girder",
+      "directions": 1,
+      "delays": [
+        [
+          1
+        ]
+      ]
+    },
+    {
       "name": "wall_girder",
       "directions": 1,
       "delays": [
@@ -287,7 +296,7 @@
       ]
     },
     {
-      "name": "reinforced_wall_girder",
+      "name": "grille",
       "directions": 1,
       "delays": [
         [
