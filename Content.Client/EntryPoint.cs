@@ -28,6 +28,7 @@ using Content.Shared.Kitchen;
 using Content.Shared.Alert;
 using Robust.Client;
 using Robust.Client.Interfaces;
+using Robust.Client.Interfaces.Graphics;
 using Robust.Client.Interfaces.Graphics.Overlays;
 using Robust.Client.Interfaces.Input;
 using Robust.Client.Interfaces.State;
@@ -98,6 +99,7 @@ namespace Content.Client
             IoCManager.Resolve<IBaseClient>().PlayerJoinedServer += SubscribePlayerAttachmentEvents;
             IoCManager.Resolve<IStylesheetManager>().Initialize();
             IoCManager.Resolve<IScreenshotHook>().Initialize();
+            IoCManager.Resolve<IClyde>().SetWindowTitle("Gradient Station 14");
 
             IoCManager.InjectDependencies(this);
 
