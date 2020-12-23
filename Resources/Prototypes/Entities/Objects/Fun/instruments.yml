@@ -225,3 +225,20 @@
     - type: Item
       size: 24
       sprite: Objects/Fun/Instruments/h_synthesizer.rsi
+
+- type: entity
+  name: needles piano
+  description: Play Needles Piano Now.
+  parent: BaseHandheldInstrument
+  id: NeedlesPianoInstrument
+  components:
+    - type: Instrument
+      program: 2
+      bank: 1
+    - type: Sprite
+      sprite: Objects/Fun/Instruments/needles_piano.rsi
+      state: icon
+    - type: NeedlesPiano
+    - type: Item
+      size: 24
+      sprite: Objects/Fun/Instruments/needles_piano.rsi
