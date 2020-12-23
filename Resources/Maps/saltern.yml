@@ -770,21 +770,21 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 91
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 28.5,14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 92
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 27.5,14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 93
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 26.5,14.5
@@ -1271,14 +1271,14 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 152
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 21.5,15.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 153
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 21.5,16.5
@@ -4420,7 +4420,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 468
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -35.5,11.5
@@ -5990,14 +5990,14 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 659
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -36.5,11.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 660
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -37.5,11.5
@@ -6071,7 +6071,7 @@ entities:
         type: Content.Server.GameObjects.ContainerSlot
     type: ContainerContainer
 - uid: 668
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -40.5,10.5
@@ -6099,14 +6099,14 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 672
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 18.5,-18.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 673
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 17.5,-18.5
@@ -6120,7 +6120,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 675
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -41.5,9.5
@@ -6155,7 +6155,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 680
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -40.5,9.5
@@ -6190,7 +6190,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 685
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -39.5,9.5
@@ -6218,7 +6218,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 689
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -39.5,7.5
@@ -6260,14 +6260,14 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 695
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -41.5,7.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 696
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -40.5,7.5
@@ -6288,7 +6288,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 699
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -40.5,6.5
@@ -6323,7 +6323,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 704
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -41.5,5.5
@@ -6351,7 +6351,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 708
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -40.5,5.5
@@ -6386,7 +6386,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 713
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -39.5,5.5
@@ -6407,7 +6407,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 716
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -39.5,3.5
@@ -6435,7 +6435,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 720
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -41.5,3.5
@@ -6470,7 +6470,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 725
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -40.5,3.5
@@ -6519,7 +6519,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 732
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -40.5,2.5
@@ -6554,7 +6554,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 737
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -40.5,1.5
@@ -6596,7 +6596,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 743
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -39.5,1.5
@@ -6654,49 +6654,49 @@ entities:
         type: Content.Server.GameObjects.ContainerSlot
     type: ContainerContainer
 - uid: 749
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -38.5,0.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 750
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -38.5,-0.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 751
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -38.5,-1.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 752
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -37.5,-2.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 753
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -38.5,-2.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 754
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -39.5,-2.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 755
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -37.5,-4.5
@@ -6714,7 +6714,7 @@ entities:
         type: Content.Server.GameObjects.ContainerSlot
     type: ContainerContainer
 - uid: 757
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -39.5,-4.5
@@ -7409,7 +7409,7 @@ entities:
         type: Robust.Server.GameObjects.Components.Container.Container
     type: ContainerContainer
 - uid: 814
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -38.5,-4.5
@@ -19815,7 +19815,7 @@ entities:
         type: Content.Server.GameObjects.ContainerSlot
     type: ContainerContainer
 - uid: 861
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -38.5,-5.5
@@ -21388,7 +21388,7 @@ entities:
         type: Robust.Server.GameObjects.Components.Container.Container
     type: ContainerContainer
 - uid: 1061
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -38.5,-6.5
@@ -21635,49 +21635,49 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1083
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -8.5,-30.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1084
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -6.5,-30.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1085
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -7.5,-30.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1086
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -6.5,-29.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1087
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -9.5,-30.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1088
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -10.5,-30.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1089
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -10.5,-29.5
@@ -22030,14 +22030,14 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1132
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 17.5,-12.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1133
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 16.5,-12.5
@@ -22064,7 +22064,7 @@ entities:
         type: Robust.Server.GameObjects.Components.Container.Container
     type: ContainerContainer
 - uid: 1136
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -38.5,-7.5
@@ -22477,14 +22477,14 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1185
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -38.5,-8.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1186
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -37.5,-8.5
@@ -22579,14 +22579,14 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1197
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -19.5,2.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1198
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -18.5,2.5
@@ -23084,14 +23084,14 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1245
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -36.5,-8.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1246
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -35.5,-8.5
@@ -24872,7 +24872,7 @@ entities:
     rot: 1.5707963267948966 rad
     type: Transform
 - uid: 1399
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 3.5,27.5
@@ -25427,7 +25427,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1478
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -27.5,6.5
@@ -25441,7 +25441,7 @@ entities:
     rot: 1.5707963267948966 rad
     type: Transform
 - uid: 1480
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -29.5,6.5
@@ -25574,28 +25574,28 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1499
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 11.5,-16.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1500
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 11.5,-13.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1501
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 7.5,-12.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1502
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 10.5,-12.5
@@ -25609,14 +25609,14 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1504
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 20.5,-12.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1505
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 20.5,-15.5
@@ -25819,21 +25819,21 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1534
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 14.5,20.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1535
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 14.5,19.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1536
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 14.5,18.5
@@ -26439,21 +26439,21 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1619
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 40.5,1.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1620
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 39.5,1.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1621
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 36.5,-0.5
@@ -26553,14 +26553,14 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1633
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,1.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1634
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,2.5
@@ -26658,7 +26658,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1648
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 37.5,1.5
@@ -26672,7 +26672,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1650
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,3.5
@@ -27064,7 +27064,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1706
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,0.5
@@ -27155,56 +27155,56 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1719
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 5.5,-23.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1720
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 5.5,-24.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1721
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 4.5,-24.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1722
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 3.5,-24.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1723
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 2.5,-24.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1724
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 9.5,-21.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1725
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 10.5,-21.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1726
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 11.5,-21.5
@@ -27218,14 +27218,14 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1728
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 34.5,7.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1729
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 32.5,7.5
@@ -27295,84 +27295,84 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1739
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 32.5,1.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1740
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 34.5,1.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1741
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 30.5,4.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1742
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 30.5,14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1743
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 30.5,15.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1744
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 31.5,15.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1745
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 32.5,15.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1746
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 33.5,15.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1747
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 34.5,15.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1748
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 35.5,15.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1749
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 36.5,15.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1750
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 36.5,14.5
@@ -27407,21 +27407,21 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1755
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 19.5,16.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1756
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 21.5,14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1757
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 23.5,14.5
@@ -27435,7 +27435,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1759
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 19.5,14.5
@@ -27568,42 +27568,42 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1778
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 19.5,6.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1779
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 20.5,6.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1780
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 21.5,6.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1781
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 22.5,6.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1782
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 23.5,15.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1783
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 23.5,16.5
@@ -27623,7 +27623,7 @@ entities:
     rot: 3.141592653589793 rad
     type: Transform
 - uid: 1786
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 19.5,15.5
@@ -27875,7 +27875,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1822
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 8.5,6.5
@@ -28357,168 +28357,168 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1889
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 3.5,22.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1890
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -1.5,27.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1891
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -0.5,27.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1892
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -3.5,29.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1893
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 10.5,29.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1894
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 9.5,31.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1895
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 9.5,32.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1896
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 8.5,32.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1897
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 8.5,33.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1898
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 7.5,33.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1899
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 6.5,33.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1900
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 5.5,33.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1901
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 4.5,33.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1902
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 3.5,33.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1903
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 2.5,33.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1904
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 1.5,33.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1905
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 0.5,33.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1906
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -0.5,33.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1907
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -1.5,33.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1908
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -1.5,32.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1909
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -2.5,31.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1910
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -2.5,32.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1911
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 6.5,19.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1912
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 6.5,18.5
@@ -28609,7 +28609,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1925
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -7.5,18.5
@@ -29064,7 +29064,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 1990
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -10.5,14.5
@@ -29253,28 +29253,28 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2017
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -0.5,9.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2018
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -3.5,9.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2019
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -7.5,9.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2020
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -8.5,9.5
@@ -29729,7 +29729,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2085
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -28.5,6.5
@@ -29946,42 +29946,42 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2116
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -25.5,9.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2117
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -2.5,6.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2118
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -3.5,6.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2119
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -0.5,6.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2120
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 0.5,6.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2121
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 14.5,8.5
@@ -30275,133 +30275,133 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2163
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 5.5,-8.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2164
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 5.5,-9.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2165
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 5.5,-10.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2166
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 13.5,-1.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2167
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 13.5,1.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2168
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 13.5,-0.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2169
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 16.5,-3.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2170
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 11.5,2.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2171
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 10.5,2.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2172
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 9.5,2.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2173
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 8.5,2.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2174
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 7.5,2.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2175
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 6.5,-6.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2176
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 9.5,-6.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2177
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 8.5,-6.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2178
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 13.5,-5.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2179
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 13.5,-4.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2180
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 12.5,-6.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2181
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 18.5,-3.5
@@ -30716,35 +30716,35 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2226
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 20.5,-14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2227
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 20.5,-5.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2228
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 11.5,-14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2229
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 11.5,-15.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2230
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 9.5,-12.5
@@ -31264,21 +31264,21 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2304
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -2.5,-18.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2305
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -4.5,-18.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2306
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 0.5,-16.5
@@ -31327,7 +31327,7 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2313
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -4.5,-21.5
@@ -31425,14 +31425,14 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2327
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -2.5,-21.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 2328
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: -5.5,-21.5
@@ -45782,91 +45782,91 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4295
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 46.5,14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4296
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 47.5,14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4297
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 48.5,14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4298
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 49.5,14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4299
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 50.5,14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4300
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4301
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,13.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4302
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,12.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4303
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,11.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4304
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,10.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4305
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,9.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4306
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,8.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4307
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,7.5
@@ -46398,77 +46398,77 @@ entities:
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4381
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 46.5,-13.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4382
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 46.5,-14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4383
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 45.5,-14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4384
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 47.5,-14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4385
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 48.5,-14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4386
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 49.5,-14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4387
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 50.5,-14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4388
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 51.5,-14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4389
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 52.5,-14.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4390
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 52.5,-13.5
     rot: -1.5707963267948966 rad
     type: Transform
 - uid: 4391
-  type: LowWall
+  type: Grille
   components:
   - parent: 855
     pos: 53.5,-14.5
