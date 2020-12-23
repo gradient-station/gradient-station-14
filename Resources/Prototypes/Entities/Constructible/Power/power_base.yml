@@ -155,6 +155,8 @@
     mode: SnapgridCenter
   components:
   - type: Clickable
+  - type: AccessReader
+    access: [["Engineering"]]
   - type: InteractionOutline
   - type: Physics
     shapes:
@@ -237,6 +239,6 @@
   - type: Destructible
     thresholds:
       100:
-        Acts: ["Breakage"]
+        acts: ["Breakage"]
   - type: Anchorable
   - type: Pullable
