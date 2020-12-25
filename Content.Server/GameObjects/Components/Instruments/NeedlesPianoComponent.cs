@@ -20,6 +20,15 @@ namespace Content.Server.GameObjects.Components.Instruments
         [ViewVariables(VVAccess.ReadWrite)]
         private IPlayerSession? _lastUser;
 
+        protected override void Startup()
+        {
+            base.Startup();
+
+            EntitySystem.Get<AudioSystem>().PlayGlobal("/Audio/Misc/needles_piano_appear.ogg", null,
+                session => session.AttachedEntity != null
+                           && session.AttachedEntity.Transform.Coordinates.InRange(Owner.EntityManager, Owner.Transform.Coordinates, 15f));
+        }
+
         public void EquippedHand(EquippedHandEventArgs eventArgs)
         {
             if (!eventArgs.User.TryGetComponent(out IActorComponent? actor) || actor.playerSession == _lastUser) return;
