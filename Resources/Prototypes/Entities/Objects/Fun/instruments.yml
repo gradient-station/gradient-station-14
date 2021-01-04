@@ -233,8 +233,8 @@
   id: NeedlesPianoInstrument
   components:
     - type: Instrument
-      program: 2
-      bank: 1
+      program: 0
+      bank: 34
     - type: Sprite
       sprite: Objects/Fun/Instruments/needles_piano.rsi
       state: icon
