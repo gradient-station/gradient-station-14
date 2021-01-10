@@ -228,7 +228,11 @@ namespace Content.Client
             "BiologicalSurgeryData",
             "CargoTelepad",
             "TraitorDeathMatchRedemption",
-            "GlassBeaker"
+            "GlassBeaker",
+            "SliceableFood",
+            "DamageOtherOnHit",
+            "DamageOnLand",
+            "Recyclable"
         };
     }
 }

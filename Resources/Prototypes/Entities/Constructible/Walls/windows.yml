@@ -33,7 +33,7 @@
       15:
         behaviors:
         - !type:PlaySoundCollectionBehavior
-          soundCollection: WindowBreak
+          soundCollection: GlassBreak
         - !type:SpawnEntitiesBehavior
           spawn:
             ShardGlass:
@@ -71,7 +71,7 @@
       75:
         behaviors:
         - !type:PlaySoundCollectionBehavior
-          soundCollection: WindowBreak
+          soundCollection: GlassBreak
         - !type:SpawnEntitiesBehavior
           spawn:
             ShardGlassReinforced:
@@ -103,7 +103,7 @@
       100:
         behaviors:
         - !type:PlaySoundCollectionBehavior
-          soundCollection: WindowBreak
+          soundCollection: GlassBreak
         - !type:SpawnEntitiesBehavior
           spawn:
             ShardGlassPhoron:
@@ -118,13 +118,6 @@
   - type: Construction
     graph: window
     node: phoronWindow
-
-- type: soundCollection
-  id: WindowBreak
-  files:
-  - /Audio/Effects/glass_break1.ogg
-  - /Audio/Effects/glass_break2.ogg
-  - /Audio/Effects/glass_break3.ogg
 
 ### TG WINDOWS
 
@@ -160,7 +153,7 @@
   - type: Destructible
     thresholds:
       15:
-        SoundCollection: WindowBreak
+        SoundCollection: GlassBreak
         Spawn:
           ShardGlass:
             Min: 1
@@ -197,7 +190,7 @@
   - type: Destructible
     thresholds:
       75:
-        SoundCollection: WindowBreak
+        SoundCollection: GlassBreak
         Spawn:
           ShardGlassReinforced:
             Min: 1
