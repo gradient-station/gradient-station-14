@@ -44933,7 +44933,7 @@ entities:
   type: ComputerSupplyOrdering
   components:
   - parent: 855
-    pos: 23.5,13.5
+    pos: 21.5,10.5
     rot: -1.5707963267948966 rad
     type: Transform
   - containers:
@@ -48885,6 +48885,13 @@ entities:
   components:
   - parent: 855
     pos: 38.585155,11.629917
+    rot: -1.5707963267948966 rad
+    type: Transform
+- uid: 4732
+  type: cargoTelepad
+  components:
+  - parent: 855
+    pos: 21.5,11.5
     rot: -1.5707963267948966 rad
     type: Transform
 ...
