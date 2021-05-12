@@ -35,21 +35,20 @@ jobs:
         mkdir "release/${{ github.sha }}"
         mv release/*.zip "release/${{ github.sha }}"
 
-    - name: Upload files to centcomm
+    - name: Upload files to gradient's build server
       uses: appleboy/scp-action@master
       with:
-        host: centcomm.spacestation14.io
-        username: wizards-build-push
-        key: ${{ secrets.CENTCOMM_WIZARDS_BUILDS_PUSH_KEY }}
+        host: ss14.zumorica.es
+        username: gradient-build-push
+        key: ${{ secrets.GRADIENT_BUILDS_PUSH_KEY }}
         source: "release/${{ github.sha }}"
-        target: "/mnt/ext/wizards-builds/builds/"
+        target: "/data/gradient-builds/builds/"
         strip_components: 1
 
     - name: Update manifest JSON
       uses: appleboy/ssh-action@master
       with:
-        host: centcomm.spacestation14.io
-        username: wizards-build-push
-        key: ${{ secrets.CENTCOMM_WIZARDS_BUILDS_PUSH_KEY }}
-        script: /home/wizards-build-push/push.ps1 ${{ github.sha }}
-
+        host: ss14.zumorica.es
+        username: gradient-build-push
+        key: ${{ secrets.GRADIENT_BUILDS_PUSH_KEY }}
+        script: /home/gradient-build-push/push.ps1 ${{ github.sha }}

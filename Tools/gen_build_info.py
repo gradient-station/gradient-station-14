@@ -18,8 +18,8 @@ SERVER_FILES = [
 ]
 
 VERSION = os.environ['GITHUB_SHA']
-FORK_ID = "wizards"
-BUILD_URL = f"https://central.spacestation14.io/builds/wizards/builds/{VERSION}/{FILE}"
+FORK_ID = "gradient"
+BUILD_URL = f"https://zumorica.es/gradient/builds/{VERSION}/{FILE}"
 
 def main() -> None:
     manifest = generate_manifest("release")
