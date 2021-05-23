@@ -445,7 +445,7 @@ namespace Content.Server.GameObjects.Components.Disposal
                 _tag = tag;
         }
 
-        private void UpdateVisualState()
+        public void UpdateVisualState()
         {
             UpdateVisualState(false);
         }
@@ -620,10 +620,6 @@ namespace Content.Server.GameObjects.Components.Disposal
                     Remove(msg.Entity);
                     break;
 
-                case AnchoredChangedMessage:
-                    UpdateVisualState();
-                    break;
-
                 case PowerChangedMessage powerChanged:
                     PowerStateChanged(powerChanged);
                     break;
@@ -727,12 +723,12 @@ namespace Content.Server.GameObjects.Components.Disposal
             return TryDrop(eventArgs.User, eventArgs.Using);
         }
 
-        public override bool CanDragDropOn(DragDropEventArgs eventArgs)
+        public override bool CanDragDropOn(DragDropEvent eventArgs)
         {
             return CanInsert(eventArgs.Dragged);
         }
 
-        public override bool DragDropOn(DragDropEventArgs eventArgs)
+        public override bool DragDropOn(DragDropEvent eventArgs)
         {
             _ = TryInsert(eventArgs.Dragged, eventArgs.User);
             return true;
