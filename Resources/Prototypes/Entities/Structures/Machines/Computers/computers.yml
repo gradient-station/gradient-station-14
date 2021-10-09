@@ -12,6 +12,21 @@
 
 - type: entity
   parent: ComputerBase
+  id: ComputerShuttleBase
+  name: shuttle console
+  description: Used to pilot a shuttle.
+  abstract: true
+  components:
+  - type: ShuttleConsole
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#43ccb5"
+
+- type: entity
+  parent: ComputerShuttleBase
   id: ComputerShuttle
   name: shuttle console
   description: Used to pilot a shuttle.
@@ -23,7 +38,7 @@
       screen: shuttle
 
 - type: entity
-  parent: ComputerBase
+  parent: ComputerShuttleBase
   id: ComputerShuttleSyndie
   name: syndicate shuttle console
   description: Used to pilot a syndicate shuttle.
@@ -33,6 +48,10 @@
     - type: ComputerVisualizer
       key: syndie_key
       screen: syndishuttle
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#c94242"
 
 - type: entity
   parent: ComputerBase
@@ -45,6 +64,10 @@
     - type: ComputerVisualizer
       key: power_key
       screen: power_monitor
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#c9c042"
 
 - type: entity
   parent: ComputerBase
@@ -57,6 +80,10 @@
     - type: ComputerVisualizer
       key: med_key
       screen: medcomp
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#1f8c28"
 
 - type: entity
   parent: ComputerBase
@@ -79,10 +106,14 @@
     - key: enum.ResearchClientUiKey.Key
       type: ResearchClientBoundUserInterface
   - type: ApcPowerReceiver
-    load: 200
+    powerLoad: 200
     priority: Low
   - type: Computer
     board: ResearchComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b53ca1"
 
 - type: entity
   parent: ComputerBase
@@ -104,6 +135,10 @@
       screen: id
   - type: Computer
     board: IDComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#3c5eb5"
 
 - type: entity
   parent: ComputerBase
@@ -123,6 +158,10 @@
       screen: generic
   - type: Computer
     board: BodyScannerComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#1f8c28"
 
 - type: entity
   parent: ComputerBase
@@ -142,6 +181,10 @@
       type: CommunicationsConsoleBoundUserInterface
   - type: Computer
     board: CommsComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#3c5eb5"
 
 - type: entity
   parent: ComputerBase
@@ -161,6 +204,10 @@
       type: SolarControlConsoleBoundUserInterface
   - type: Computer
     board: SolarControlComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#e6e227"
 
 - type: entity
   id: ComputerSupplyOrdering
@@ -227,6 +274,10 @@
       type: CargoConsoleBoundUserInterface
   - type: Computer
     board: SupplyComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
 
 - type: entity
   id: ComputerSupplyRequest
@@ -243,3 +294,7 @@
     requestOnly: true
   - type: Computer
     board: SupplyRequestComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"

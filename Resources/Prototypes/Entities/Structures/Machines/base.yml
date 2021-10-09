@@ -10,7 +10,7 @@
     fixtures:
     - shape:
         !type:PhysShapeAabb
-          bounds: "-0.45, -0.45, 0.45, 0.45"
+          bounds: "-0.45,-0.45,0.45,0.45"
       mass: 25
       layer:
       - MobMask
@@ -18,7 +18,8 @@
       mask:
       - MobMask
   - type: Damageable
-    resistances: metallicResistances
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -28,7 +29,8 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/metalbreak.ogg
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
 
 - type: entity
   abstract: true

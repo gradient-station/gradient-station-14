@@ -1,14 +1,12 @@
-#nullable enable
 using System;
 using System.Linq;
 using Content.Server.Stunnable.Components;
 using Content.Server.UserInterface;
 using Content.Shared.ActionBlocker;
-using Content.Shared.DragDrop;
 using Content.Shared.Hands;
 using Content.Shared.Instruments;
 using Content.Shared.Interaction;
-using Content.Shared.Notification.Managers;
+using Content.Shared.Popups;
 using Content.Shared.Standing;
 using Content.Shared.Throwing;
 using Robust.Server.GameObjects;
@@ -308,7 +306,9 @@ namespace Content.Server.Instruments
         {
             if (!user.TryGetComponent(out ActorComponent? actor)) return;
 
-            if (InstrumentPlayer != null || !EntitySystem.Get<ActionBlockerSystem>().CanInteract(user)) return;
+            if ((!Handheld && InstrumentPlayer != null)
+                || (Handheld && actor.PlayerSession != InstrumentPlayer)
+                || !EntitySystem.Get<ActionBlockerSystem>().CanInteract(user)) return;
 
             InstrumentPlayer = actor.PlayerSession;
             OpenUserInterface(InstrumentPlayer);

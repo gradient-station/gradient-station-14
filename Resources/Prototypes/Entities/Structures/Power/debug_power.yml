@@ -2,6 +2,10 @@
   id: DebugGenerator
   parent: BaseGenerator
   suffix: DEBUG
+  components:
+  - type: Tag
+    tags:
+      - Debug
 
 - type: entity
   id: DebugConsumer
@@ -10,15 +14,19 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Tag
+    tags:
+      - Debug
   - type: Clickable
   - type: InteractionOutline
   - type: Physics
     fixtures:
     - shape:
         !type:PhysShapeAabb
-          bounds: "-0.5, -0.5, 0.5, 0.5"
+          bounds: "-0.5,-0.5,0.5,0.5"
       layer: [MobMask, Opaque]
-  - type: SnapGrid
+  - type: Transform
+    anchored: true
   - type: Sprite
     sprite: Structures/Power/power.rsi
     state: wiredmachine
@@ -30,7 +38,8 @@
   - type: PowerConsumer
     drawRate: 50
   - type: Damageable
-    resistances: metallicResistances
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -48,15 +57,19 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Tag
+    tags:
+      - Debug
   - type: Clickable
   - type: InteractionOutline
   - type: Physics
     fixtures:
     - shape:
         !type:PhysShapeAabb
-          bounds: "-0.5, -0.5, 0.5, 0.5"
+          bounds: "-0.5,-0.5,0.5,0.5"
       layer: [MobMask, Opaque]
-  - type: SnapGrid
+  - type: Transform
+    anchored: true
   - type: Sprite
     sprite: Structures/Power/power.rsi
     state: provider
@@ -75,15 +88,19 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Tag
+    tags:
+      - Debug
   - type: Clickable
   - type: InteractionOutline
   - type: Physics
     fixtures:
     - shape:
         !type:PhysShapeAabb
-          bounds: "-0.5, -0.5, 0.5, 0.5"
+          bounds: "-0.5,-0.5,0.5,0.5"
       layer: [MobMask, Opaque]
-  - type: SnapGrid
+  - type: Transform
+    anchored: true
   - type: Sprite
     sprite: Structures/Power/power.rsi
     state: provider
@@ -100,16 +117,28 @@
   id: DebugSmes
   parent: BaseSmes
   suffix: DEBUG
+  components:
+  - type: Tag
+    tags:
+      - Debug
 
 - type: entity
   id: DebugSubstation
   parent: BaseSubstation
   suffix: DEBUG
+  components:
+  - type: Tag
+    tags:
+      - Debug
 
 - type: entity
   id: DebugApc
   parent: BaseApc
   suffix: DEBUG
+  components:
+  - type: Tag
+    tags:
+      - Debug
 
 - type: entity
   id: DebugPowerReceiver
@@ -118,15 +147,19 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Tag
+    tags:
+      - Debug
   - type: Clickable
   - type: InteractionOutline
   - type: Physics
     fixtures:
     - shape:
         !type:PhysShapeAabb
-          bounds: "-0.5, -0.5, 0.5, 0.5"
+          bounds: "-0.5,-0.5,0.5,0.5"
       layer: [MobMask, Opaque]
-  - type: SnapGrid
+  - type: Transform
+    anchored: true
   - type: Sprite
     sprite: Structures/Power/power.rsi
     state: wirelessmachine

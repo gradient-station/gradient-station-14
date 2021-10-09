@@ -1,4 +1,3 @@
-#nullable enable
 using System;
 using System.Diagnostics.CodeAnalysis;
 using Content.Server.Power.NodeGroups;
@@ -29,7 +28,7 @@ namespace Content.Server.Power.Components
         public override string Name => "ApcPowerReceiver";
 
         [ViewVariables]
-        public bool Powered => (MathHelper.CloseTo(NetworkLoad.ReceivingPower, Load) || !NeedsPower) && !PowerDisabled;
+        public bool Powered => (MathHelper.CloseToPercent(NetworkLoad.ReceivingPower, Load) || !NeedsPower) && !PowerDisabled;
 
         /// <summary>
         ///     The max distance from a <see cref="ApcPowerProviderComponent"/> that this can receive power from.

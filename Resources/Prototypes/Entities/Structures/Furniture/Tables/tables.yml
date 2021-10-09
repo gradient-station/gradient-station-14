@@ -9,7 +9,8 @@
   - type: Icon
     sprite: Structures/Furniture/Tables/frame.rsi
   - type: Damageable
-    resistances: metallicResistances
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -17,7 +18,8 @@
         damage: 1
       behaviors:
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/metalbreak.ogg
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
           PartRodMetal1:
@@ -40,7 +42,8 @@
   - type: Icon
     sprite: Structures/Furniture/Tables/generic.rsi
   - type: Damageable
-    resistances: metallicResistances
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -48,7 +51,8 @@
         damage: 15
       behaviors:
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/metalbreak.ogg
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
           SheetSteel1:
@@ -77,7 +81,8 @@
         damage: 1
       behaviors:
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/metalbreak.ogg
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
           SheetSteel1:
@@ -109,7 +114,8 @@
         damage: 15
       behaviors:
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/metalbreak.ogg
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
           SheetSteel1:
@@ -135,7 +141,8 @@
         damage: 75
       behaviors:
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/metalbreak.ogg
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
           SheetSteel1:
@@ -164,7 +171,8 @@
         damage: 5
       behaviors:
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/glass_break2.ogg
+        sound:
+          path: /Audio/Effects/glass_break2.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
           ShardGlass:
@@ -193,7 +201,8 @@
         damage: 20
       behaviors:
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/glass_break2.ogg
+        sound:
+          path: /Audio/Effects/glass_break2.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
           ShardGlass:
@@ -218,6 +227,8 @@
     sprite: Structures/Furniture/Tables/wood.rsi
   - type: Icon
     sprite: Structures/Furniture/Tables/wood.rsi
+  - type: Damageable
+    damageModifierSet: Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -225,7 +236,8 @@
         damage: 15
       behaviors:
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/woodhit.ogg
+        sound:
+          path: /Audio/Effects/woodhit.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
           MaterialWoodPlank:
@@ -236,6 +248,9 @@
   - type: Construction
     graph: table
     node: TableWood
+  - type: Tag
+    tags:
+    - Wooden
 
 - type: entity
   id: TableCarpet
@@ -247,6 +262,8 @@
     sprite: Structures/Furniture/Tables/carpet.rsi
   - type: Icon
     sprite: Structures/Furniture/Tables/carpet.rsi
+  - type: Damageable
+    damageModifierSet: Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -254,7 +271,8 @@
         damage: 15
       behaviors:
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/woodhit.ogg
+        sound:
+          path: /Audio/Effects/woodhit.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
           MaterialWoodPlank:
@@ -268,6 +286,9 @@
   - type: Construction
     graph: table
     node: TableCarpet
+  - type: Tag
+    tags:
+    - Wooden
 
 - type: entity
   id: TableStone
@@ -286,7 +307,8 @@
         damage: 50
       behaviors:
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/picaxe2.ogg
+        sound:
+          path: /Audio/Effects/picaxe2.ogg
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 
@@ -297,6 +319,9 @@
   description: PUT ON THEM CODERSOCKS!!
   suffix: DEBUG
   components:
+  - type: Tag
+    tags:
+      - Debug
   - type: Sprite
     sprite: Structures/Furniture/Tables/debug.rsi
   - type: Icon

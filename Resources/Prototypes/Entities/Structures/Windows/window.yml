@@ -30,7 +30,8 @@
       mask:
       - VaultImpassable
   - type: Damageable
-    resistances: glassResistances
+    damageContainer: Inorganic
+    damageModifierSet: Glass
   - type: Repairable
   - type: Destructible
     thresholds:
@@ -38,8 +39,9 @@
         !type:DamageTrigger
         damage: 15
       behaviors:
-      - !type:PlaySoundCollectionBehavior
-        soundCollection: GlassBreak
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
       - !type:SpawnEntitiesBehavior
         spawn:
           ShardGlass:

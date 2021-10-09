@@ -1,10 +1,16 @@
-﻿# Vending machine descriptions are stored in vendingMachineInventory YAML files.
 - type: entity
   id: VendingMachine
   parent: BaseMachinePowered
   name: vending machine
+  description: Just add capitalism!
   abstract: true
   components:
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -14
+    range: 3
+    sound:
+      path: /Audio/Ambience/Objects/vending_machine_hum.ogg
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/empty.rsi
     netsync: false
@@ -13,7 +19,7 @@
     fixtures:
     - shape:
         !type:PhysShapeAabb
-          bounds: "-0.5,-0.25,0.5,0.25"
+          bounds: "-0.25,-0.5,0.25,0.5"
       mask:
       - Impassable
       - VaultImpassable
@@ -40,6 +46,11 @@
     BoardName: "Vending Machine"
     LayoutId: Vending
   - type: Anchorable
+  - type: PointLight
+    enabled: false
+    castShadows: false
+    radius: 1.5
+  - type: LitOnPowered
 
 - type: entity
   parent: VendingMachine
@@ -132,7 +143,7 @@
   parent: VendingMachine
   id: VendingMachineCart
   name: PTech
-  description: Cartridges for PDAs.
+  description: PTech vending! Providing a ROBUST selection of PDA cartridges.
   components:
   - type: VendingMachine
     pack: PTechInventory
@@ -154,6 +165,10 @@
       denyUnshaded: true
       broken: true
     - type: WiresVisualizer
+  - type: PointLight
+    radius: 1
+    energy: 1.3
+    color: "#ffb0b0"
 
 - type: entity
   parent: VendingMachine
@@ -213,12 +228,16 @@
       denyUnshaded: true
       broken: true
     - type: WiresVisualizer
+  - type: PointLight
+    radius: 1.8
+    energy: 1.6
+    color: "#3db83b"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineCoffee
   name: Solar's Best Hot Drinks
-  description: A vending machine which dispenses hot drinks.
+  description: Served boiling so it stays hot all shift!
   components:
   - type: VendingMachine
     pack: HotDrinksMachineInventory
@@ -247,6 +266,10 @@
       denyUnshaded: true
       broken: true
     - type: WiresVisualizer
+  - type: PointLight
+    radius: 1.5
+    energy: 1.3
+    color: "#ad7c4b"
 
 - type: entity
   parent: VendingMachine
@@ -277,6 +300,10 @@
       denyUnshaded: true
       broken: true
     - type: WiresVisualizer
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#3c5eb5"
 
 - type: entity
   parent: VendingMachine
@@ -307,11 +334,16 @@
     - type: WiresVisualizer
   - type: AccessReader
     access: [["Service"]]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#4b93ad"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineDiscount
   name: Discount Dan's
+  description: A vending machine containing discount snacks from the infamous 'Discount Dan' franchise.
   components:
   - type: VendingMachine
     pack: DiscountDansInventory
@@ -334,6 +366,10 @@
       normalUnshaded: true
       broken: true
     - type: WiresVisualizer
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#6148c7"
 
 - type: entity
   parent: VendingMachine
@@ -363,12 +399,16 @@
     - type: WiresVisualizer
   - type: AccessReader
     access: [["Engineering"]]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89e2a"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineMedical
   name: NanoMed Plus
-  description: Medical drug dispenser.
+  description: It's a medical drug dispenser. Natural chemicals only!
   components:
   - type: VendingMachine
     pack: NanoMedPlusInventory
@@ -394,12 +434,16 @@
     - type: WiresVisualizer
   - type: AccessReader
     access: [["Medical"]]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineNutri
   name: NutriMax
-  description: A plant nutrients vendor.
+  description: A vending machine containing nutritional substances for plants and botanical tools.
   components:
   - type: VendingMachine
     pack: NutriMaxInventory
@@ -425,11 +469,16 @@
     - type: WiresVisualizer
   - type: AccessReader
     access: [["Service"]]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#326e3f"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineSec
   name: SecTech
+  description: A vending machine containing Security equipment. A label reads SECURITY PERSONNEL ONLY.
   components:
   - type: VendingMachine
     pack: SecTechInventory
@@ -454,11 +503,16 @@
     - type: WiresVisualizer
   - type: AccessReader
     access: [["Security"]]
+  - type: PointLight
+    radius: 1
+    energy: 1.2
+    color: "#78645c"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineSeeds
   name: MegaSeed Servitor
+  description: For when you need seeds fast. Hands down the best seed selection on the station!
   components:
   - type: VendingMachine
     pack: MegaSeedServitorInventory
@@ -483,11 +537,16 @@
     - type: WiresVisualizer
   - type: AccessReader
     access: [["Service"]]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#326e3f"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineSmartFridge
   name: SmartFridge
+  description: A refrigerated storage unit for storing medicine and chemicals.
   components:
   - type: VendingMachine
     pack: SmartFridgeInventory
@@ -510,11 +569,16 @@
       normalUnshaded: true
       broken: true
     - type: WiresVisualizer
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineSnack
   name: Getmore Chocolate Corp
+  description: A snack machine courtesy of the Getmore Chocolate Corporation, based out of Mars.
   components:
   - type: VendingMachine
     pack: GetmoreChocolateCorpInventory
@@ -539,11 +603,16 @@
       denyUnshaded: true
       broken: true
     - type: WiresVisualizer
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#c73434"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineSovietSoda
   name: BODA
+  description: An old vending machine containing sweet water.
   components:
   - type: VendingMachine
     pack: BodaInventory
@@ -568,11 +637,16 @@
       denyUnshaded: true
       broken: true
     - type: WiresVisualizer
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#389690"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineTheater
   name: AutoDrobe
+  description: A vending machine containing costumes.
   components:
   - type: VendingMachine
     pack: AutoDrobeInventory
@@ -601,11 +675,16 @@
       denyUnshaded: true
       broken: true
     - type: WiresVisualizer
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#c73434"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineVendomat
   name: Vendomat
+  description: Only the finest robust equipment in space!
   components:
   - type: VendingMachine
     pack: VendomatInventory
@@ -631,11 +710,16 @@
       denyUnshaded: true
       broken: true
     - type: WiresVisualizer
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineWallMedical
   name: NanoMed
+  description: "It's a wall-mounted medical equipment dispenser. Natural chemicals only!"
   components:
   - type: VendingMachine
     pack: NanoMedInventory
@@ -663,6 +747,7 @@
   parent: VendingMachine
   id: VendingMachineYouTool
   name: YouTool
+  description: "A vending machine containing standard tools. A label reads: Tools for tools."
   components:
   - type: VendingMachine
     pack: YouToolInventory
@@ -687,3 +772,7 @@
       denyUnshaded: true
       broken: true
     - type: WiresVisualizer
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#d4ab33"

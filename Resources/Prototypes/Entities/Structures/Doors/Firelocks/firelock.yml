@@ -6,7 +6,8 @@
   components:
     - type: InteractionOutline
     - type: Damageable
-      resistances: metallicResistances
+      damageContainer: Inorganic
+      damageModifierSet: Metallic
     - type: Destructible
       thresholds:
       - trigger:
@@ -37,7 +38,7 @@
       fixtures:
       - shape:
           !type:PhysShapeAabb
-            bounds: "-0.49,-0.49,0.49,0.49" # don't want this colliding with walls or they won't close
+          bounds: "-0.49,-0.49,0.49,0.49"  # don't want this colliding with walls or they won't close
         mask:
           - MobImpassable
         layer:
@@ -54,14 +55,20 @@
       startOpen: true
       bumpOpen: false
       inhibitCrush: false
+      crushDamage:
+        types:
+          Blunt: 15
+      openSound:
+        path: /Audio/Machines/airlock_open.ogg
+      closeSound:
+        path: /Audio/Machines/airlock_close.ogg
+      denySound:
+        path: /Audio/Machines/airlock_deny.ogg
     - type: Firelock
     - type: Appearance
       visuals:
         - type: AirlockVisualizer
-          open_sound: /Audio/Machines/airlock_open.ogg
-          close_sound: /Audio/Machines/airlock_close.ogg
-          deny_sound: /Audio/Machines/airlock_deny.ogg
-          animation_time: 0.6
+          animationTime: 0.6
         - type: WiresVisualizer
     - type: Wires
       BoardName: "Firelock Control"
@@ -86,6 +93,9 @@
     - type: Door
       occludes: false
       inhibitCrush: false
+      crushDamage:
+        types:
+          Blunt: 15
     - type: Occluder
       enabled: false
     - type: Sprite
@@ -99,6 +109,9 @@
     - type: Door
       occludes: false
       inhibitCrush: false
+      crushDamage:
+        types:
+          Blunt: 15
     - type: Sprite
       sprite: Structures/Doors/edge_door_hazard.rsi
     - type: Airtight
@@ -109,8 +122,8 @@
     - type: Physics
       fixtures:
       - shape:
-          !type:PhysShapeRect
-          bounds: "0.49,-0.49,-0.49,-0.2" # don't want this colliding with walls or they won't close
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,-0.2" # don't want this colliding with walls or they won't close
         mask:
           - MobImpassable
         layer:

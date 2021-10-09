@@ -5,7 +5,10 @@
   name: crate
   description: A large container for items.
   components:
+  - type: Transform
+    noRot: true
   - type: Sprite
+    noRot: true
     netsync: false
     sprite: Structures/Storage/Crates/generic.rsi
     layers:
@@ -20,7 +23,7 @@
     fixtures:
     - shape:
         !type:PhysShapeAabb
-          bounds: "-0.4, -0.4, 0.29, 0.4"
+          bounds: "-0.4,-0.4,0.4,0.29"
       mass: 25
       mask:
       - Impassable
@@ -35,7 +38,8 @@
     CanWeldShut: true
   - type: PlaceableSurface
   - type: Damageable
-    resistances: metallicResistances
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -49,4 +53,3 @@
     - type: StorageVisualizer
       state_open: crate_open
       state_closed: crate_door
-  - type: LoopingSound

@@ -4,7 +4,10 @@
   name: closet
   description: A standard-issue Nanotrasen storage unit.
   components:
+  - type: Transform
+    noRot: true
   - type: Sprite
+    noRot: true
     netsync: false
     sprite: Structures/Storage/closet.rsi
     layers:
@@ -16,13 +19,17 @@
       map: ["enum.StorageVisualLayers.Welded"]
   - type: MovedByPressure
   - type: DamageOnHighSpeedImpact
-    soundHit: /Audio/Effects/bang.ogg
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      path: /Audio/Effects/bang.ogg
   - type: InteractionOutline
   - type: Physics
     fixtures:
     - shape:
         !type:PhysShapeAabb
-          bounds: "-0.48,-0.25,0.48,0.25"
+          bounds: "-0.25,-0.48,0.25,0.48"
       mass: 70
       mask:
       - Impassable
@@ -36,7 +43,8 @@
   - type: PlaceableSurface
     placeCentered: true
   - type: Damageable
-    resistances: metallicResistances
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -46,7 +54,8 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/metalbreak.ogg
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
           SheetSteel1:
@@ -57,4 +66,3 @@
     - type: StorageVisualizer
       state_open: generic_open
       state_closed: generic_door
-  - type: LoopingSound

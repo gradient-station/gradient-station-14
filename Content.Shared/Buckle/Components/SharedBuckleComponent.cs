@@ -1,4 +1,3 @@
-#nullable enable
 using System;
 using Content.Shared.ActionBlocker;
 using Content.Shared.DragDrop;
@@ -36,11 +35,6 @@ namespace Content.Shared.Buckle.Components
         public bool DontCollide { get; set; }
 
         public abstract bool TryBuckle(IEntity? user, IEntity to);
-
-        bool IActionBlocker.CanMove()
-        {
-            return !Buckled;
-        }
 
         bool IActionBlocker.CanChangeDirection()
         {

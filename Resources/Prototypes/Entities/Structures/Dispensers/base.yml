@@ -4,6 +4,8 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Transform
+    anchored: true
   - type: Clickable
   - type: InteractionOutline
   - type: Physics
@@ -11,7 +13,7 @@
     fixtures:
     - shape:
         !type:PhysShapeAabb
-          bounds: "-0.3,-0.4,0.3,0.4"
+          bounds: "-0.4,-0.3,0.4,0.3"
       mass: 25
       mask:
         - Impassable
@@ -26,11 +28,11 @@
     interfaces:
     - key: enum.ReagentDispenserUiKey.Key
       type: ReagentDispenserBoundUserInterface
-  - type: LoopingSound
   - type: Anchorable
   - type: Pullable
   - type: Damageable
-    resistances: metallicResistances
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -40,4 +42,5 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/metalbreak.ogg
+        sound:
+          path: /Audio/Effects/metalbreak.ogg

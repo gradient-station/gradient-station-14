@@ -19,7 +19,8 @@
       - book-4
       - book-5
   - type: Damageable
-    resistances: metallicResistances
+    damageModifierSet: Wood
+    damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger:
@@ -27,7 +28,8 @@
         damage: 30
       behaviors:
       - !type:PlaySoundBehavior
-        sound: /Audio/Effects/woodhit.ogg
+        sound:
+          path: /Audio/Effects/woodhit.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
           MaterialWoodPlank:
@@ -35,3 +37,6 @@
             max: 1
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: Tag
+    tags:
+    - Wooden
