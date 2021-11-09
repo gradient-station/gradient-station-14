@@ -20,8 +20,15 @@ namespace Content.Shared.Hands
 
         public void DropHandItems(IEntity entity, bool doMobChecks = true)
         {
-            if (!entity.TryGetComponent(out SharedHandsComponent? handsComponent)) return;
-            DropHandItems(handsComponent, doMobChecks);
+            DropHandItems(entity.Uid, doMobChecks);
+        }
+
+        public void DropHandItems(EntityUid uid, bool doMobChecks = true, SharedHandsComponent? hands = null)
+        {
+            if (!Resolve(uid, ref hands))
+                return;
+
+            DropHandItems(hands, doMobChecks);
         }
 
         private void DropHandItems(SharedHandsComponent handsComponent, bool doMobChecks = true)
@@ -39,7 +46,7 @@ namespace Content.Shared.Hands
             if (entity.TryGetContainerMan(out var containerManager))
             {
                 var parentMsg = new ContainedEntityDropHandItemsAttemptEvent(uid);
-                eventBus.RaiseLocalEvent(containerManager.Owner.Uid, parentMsg);
+                eventBus.RaiseLocalEvent(containerManager.OwnerUid, parentMsg);
 
                 if (parentMsg.Cancelled)
                     return;

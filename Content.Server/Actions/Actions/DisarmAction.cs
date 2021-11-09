@@ -65,10 +65,9 @@ namespace Content.Server.Actions.Actions
             }
 
             if (!args.Performer.TryGetComponent<SharedActionsComponent>(out var actions)) return;
-            if (args.Target == args.Performer || !EntitySystem.Get<ActionBlockerSystem>().CanAttack(args.Performer)) return;
+            if (args.Target == args.Performer || !EntitySystem.Get<ActionBlockerSystem>().CanAttack(args.Performer.Uid)) return;
 
             var random = IoCManager.Resolve<IRobustRandom>();
-            var audio = EntitySystem.Get<AudioSystem>();
             var system = EntitySystem.Get<MeleeWeaponSystem>();
 
             var diff = args.Target.Transform.MapPosition.Position - args.Performer.Transform.MapPosition.Position;
@@ -91,11 +90,18 @@ namespace Content.Server.Actions.Actions
 
             system.SendAnimation("disarm", angle, args.Performer, args.Performer, new[] { args.Target });
 
-            var eventArgs = new DisarmedActEventArgs() { Target = args.Target, Source = args.Performer, PushProbability = _pushProb };
+            var eventArgs = new DisarmedActEvent() { Target = args.Target, Source = args.Performer, PushProbability = _pushProb };
+
+            IoCManager.Resolve<IEntityManager>().EventBus.RaiseLocalEvent(args.Target.Uid, eventArgs);
+
+            // Check if the event has been handled, and if so, do nothing else!
+            if (eventArgs.Handled)
+                return;
 
             // Sort by priority.
             Array.Sort(disarmedActs, (a, b) => a.Priority.CompareTo(b.Priority));
 
+            // TODO: Remove this shit.
             foreach (var disarmedAct in disarmedActs)
             {
                 if (disarmedAct.Disarmed(eventArgs))

@@ -34,7 +34,9 @@ namespace Content.Server.Weapon.Ranged.Barrels.Components
     /// All of the ranged weapon components inherit from this to share mechanics like shooting etc.
     /// Only difference between them is how they retrieve a projectile to shoot (battery, magazine, etc.)
     /// </summary>
+#pragma warning disable 618
     public abstract class ServerRangedBarrelComponent : SharedRangedBarrelComponent, IUse, IInteractUsing, IExamine, ISerializationHooks
+#pragma warning restore 618
     {
         // There's still some of py01 and PJB's work left over, especially in underlying shooting logic,
         // it's just when I re-organised it changed me as the contributor
@@ -357,9 +359,11 @@ namespace Content.Server.Weapon.Ranged.Barrels.Components
                 });
 
 
-                projectile.Transform.LocalRotation = projectileAngle + MathHelper.PiOver2;
+                projectile.Transform.WorldRotation = projectileAngle + MathHelper.PiOver2;
             }
+#pragma warning disable 618
             ammo.SendMessage(this, new BarrelFiredMessage(firedProjectiles));
+#pragma warning restore 618
         }
 
         /// <summary>
@@ -384,7 +388,7 @@ namespace Content.Server.Weapon.Ranged.Barrels.Components
         private void FireHitscan(IEntity shooter, HitscanComponent hitscan, Angle angle)
         {
             var ray = new CollisionRay(Owner.Transform.Coordinates.ToMapPos(Owner.EntityManager), angle.ToVec(), (int) hitscan.CollisionMask);
-            var physicsManager = EntitySystem.Get<SharedBroadphaseSystem>();
+            var physicsManager = EntitySystem.Get<SharedPhysicsSystem>();
             var rayCastResults = physicsManager.IntersectRay(Owner.Transform.MapID, ray, hitscan.MaxLength, shooter, false).ToList();
 
             if (rayCastResults.Count >= 1)
@@ -415,7 +419,9 @@ namespace Content.Server.Weapon.Ranged.Barrels.Components
         }
     }
 
+#pragma warning disable 618
     public class BarrelFiredMessage : ComponentMessage
+#pragma warning restore 618
     {
         public readonly List<IEntity> FiredProjectiles;
 

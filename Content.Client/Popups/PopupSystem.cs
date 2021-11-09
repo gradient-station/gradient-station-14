@@ -19,7 +19,6 @@ namespace Content.Client.Popups
     public class PopupSystem : SharedPopupSystem
     {
         [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
-        [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly IEyeManager _eyeManager = default!;
 
         private readonly List<PopupLabel> _aliveLabels = new();
@@ -49,7 +48,7 @@ namespace Content.Client.Popups
             if (!EntityManager.EntityExists(uid))
                 return;
 
-            var transform = EntityManager.GetComponent<ITransformComponent>(uid);
+            var transform = EntityManager.GetComponent<TransformComponent>(uid);
             PopupMessage(message, _eyeManager.CoordinatesToScreen(transform.Coordinates));
         }
 

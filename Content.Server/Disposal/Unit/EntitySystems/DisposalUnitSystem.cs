@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Content.Server.Atmos.EntitySystems;
-using Content.Server.Disposal.Unit.Components;
 using Content.Server.Construction.Components;
 using Content.Server.Disposal.Tube.Components;
+using Content.Server.Disposal.Unit.Components;
+using Content.Server.DoAfter;
 using Content.Server.Hands.Components;
 using Content.Server.Items;
 using Content.Server.Power.Components;
@@ -17,6 +18,7 @@ using Content.Shared.Interaction;
 using Content.Shared.Movement;
 using Content.Shared.Popups;
 using Content.Shared.Throwing;
+using Content.Shared.Verbs;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
 using Robust.Shared.GameObjects;
@@ -26,7 +28,6 @@ using Robust.Shared.Log;
 using Robust.Shared.Map;
 using Robust.Shared.Maths;
 using Robust.Shared.Random;
-using Content.Shared.Verbs;
 
 namespace Content.Server.Disposal.Unit.EntitySystems
 {
@@ -36,6 +37,7 @@ namespace Content.Server.Disposal.Unit.EntitySystems
         [Dependency] private readonly IRobustRandom _robustRandom = default!;
         [Dependency] private readonly ActionBlockerSystem _actionBlockerSystem = default!;
         [Dependency] private readonly AtmosphereSystem _atmosSystem = default!;
+        [Dependency] private readonly DoAfterSystem _doAfterSystem = default!;
 
         private readonly List<DisposalUnitComponent> _activeDisposals = new();
 
@@ -63,7 +65,11 @@ namespace Content.Server.Disposal.Unit.EntitySystems
             // Verbs
             SubscribeLocalEvent<DisposalUnitComponent, GetAlternativeVerbsEvent>(AddFlushEjectVerbs);
             SubscribeLocalEvent<DisposalUnitComponent, GetOtherVerbsEvent>(AddClimbInsideVerb);
+
+            // Units
+            SubscribeLocalEvent<DoInsertDisposalUnitEvent>(DoInsertDisposalUnit);
         }
+
         private void AddFlushEjectVerbs(EntityUid uid, DisposalUnitComponent component, GetAlternativeVerbsEvent args)
         {
             if (!args.CanAccess || !args.CanInteract || component.ContainedEntities.Count == 0)
@@ -92,18 +98,37 @@ namespace Content.Server.Disposal.Unit.EntitySystems
             if (!args.CanAccess ||
                 !args.CanInteract ||
                 component.ContainedEntities.Contains(args.User) ||
-                !_actionBlockerSystem.CanMove(args.User))
+                !_actionBlockerSystem.CanMove(args.User.Uid))
                 return;
 
-            // Add verb to climb inside of the unit, 
-            Verb verb = new();
-            verb.Act = () => component.TryInsert(args.User, args.User);
-            verb.Text = Loc.GetString("disposal-self-insert-verb-get-data-text");
+            // Add verb to climb inside of the unit,
+            Verb verb = new()
+            {
+                Act = () => TryInsert(component.Owner.Uid, args.User.Uid, args.User.Uid),
+                Text = Loc.GetString("disposal-self-insert-verb-get-data-text")
+            };
             // TODO VERN ICON
             // TODO VERB CATEGORY
             // create a verb category for "enter"?
             // See also, medical scanner. Also maybe add verbs for entering lockers/body bags?
             args.Verbs.Add(verb);
+        }
+
+        private void DoInsertDisposalUnit(DoInsertDisposalUnitEvent ev)
+        {
+            var toInsert = EntityManager.GetEntity(ev.ToInsert);
+
+            if (!EntityManager.TryGetComponent(ev.Unit, out DisposalUnitComponent? unit))
+            {
+                return;
+            }
+
+            if (!unit.Container.Insert(toInsert))
+            {
+                return;
+            }
+
+            AfterInsert(unit, toInsert);
         }
 
         public override void Update(float frameTime)
@@ -354,7 +379,7 @@ namespace Content.Server.Disposal.Unit.EntitySystems
 
         private bool IsValidInteraction(ITargetedInteractEventArgs eventArgs)
         {
-            if (!Get<ActionBlockerSystem>().CanInteract(eventArgs.User))
+            if (!Get<ActionBlockerSystem>().CanInteract(eventArgs.User.Uid))
             {
                 eventArgs.Target.PopupMessage(eventArgs.User, Loc.GetString("ui-disposal-unit-is-valid-interaction-cannot=interact"));
                 return false;
@@ -367,7 +392,7 @@ namespace Content.Server.Disposal.Unit.EntitySystems
             }
             // This popup message doesn't appear on clicks, even when code was seperate. Unsure why.
 
-            if (!eventArgs.User.HasComponent<IHandsComponent>())
+            if (!eventArgs.User.HasComponent<HandsComponent>())
             {
                 eventArgs.Target.PopupMessage(eventArgs.User, Loc.GetString("ui-disposal-unit-is-valid-interaction-no-hands"));
                 return false;
@@ -375,6 +400,39 @@ namespace Content.Server.Disposal.Unit.EntitySystems
 
             return true;
         }
+
+        public void TryInsert(EntityUid unitId, EntityUid toInsertId, EntityUid userId, DisposalUnitComponent? unit = null)
+        {
+            if (!Resolve(unitId, ref unit))
+                return;
+
+            if (!CanInsert(unit, toInsertId))
+                return;
+
+            var delay = userId == toInsertId ? unit.EntryDelay : unit.DraggedEntryDelay;
+            var ev = new DoInsertDisposalUnitEvent(userId, toInsertId, unitId);
+
+            if (delay <= 0)
+            {
+                DoInsertDisposalUnit(ev);
+                return;
+            }
+
+            // Can't check if our target AND disposals moves currently so we'll just check target.
+            // if you really want to check if disposals moves then add a predicate.
+            var doAfterArgs = new DoAfterEventArgs(userId, delay, default, toInsertId)
+            {
+                BreakOnDamage = true,
+                BreakOnStun = true,
+                BreakOnTargetMove = true,
+                BreakOnUserMove = true,
+                NeedHand = false,
+                BroadcastFinishedEvent = ev
+            };
+
+            _doAfterSystem.DoAfter(doAfterArgs);
+        }
+
 
         public bool TryFlush(DisposalUnitComponent component)
         {
