@@ -2,6 +2,7 @@
   id: AirlockShuttle
   parent: BaseStructure
   name: airlock
+  suffix: Docking
   description: Necessary for connecting two space craft together.
   components:
   - type: Docking
@@ -23,6 +24,7 @@
     #- state: panel_open
     #  map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Physics
+  - type: Fixtures
     fixtures:
     - shape:
         !type:PhysShapeAabb
@@ -66,6 +68,8 @@
   #    type: WiresBoundUserInterface
   - type: Airtight
     fixVacuum: true
+    airBlockedDirection:
+      - South
   - type: Occluder
   - type: Damageable
     damageContainer: Inorganic

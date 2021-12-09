@@ -10,6 +10,7 @@ using Content.Server.EUI;
 using Content.Server.GameTicking;
 using Content.Server.Holiday.Interfaces;
 using Content.Server.IoC;
+using Content.Server.Maps;
 using Content.Server.NodeContainer.NodeGroups;
 using Content.Server.Preferences.Managers;
 using Content.Server.Sandbox;
@@ -61,6 +62,7 @@ namespace Content.Server.Entry
             _euiManager = IoCManager.Resolve<EuiManager>();
             _voteManager = IoCManager.Resolve<IVoteManager>();
 
+            IoCManager.Resolve<IChatSanitizationManager>().Initialize();
             IoCManager.Resolve<IChatManager>().Initialize();
 
             var playerManager = IoCManager.Resolve<IPlayerManager>();
@@ -91,6 +93,7 @@ namespace Content.Server.Entry
             IoCManager.Resolve<IAfkManager>().Initialize();
             _euiManager.Initialize();
 
+            IoCManager.Resolve<IGameMapManager>().Initialize();
             IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<GameTicker>().PostInitialize();
             IoCManager.Resolve<IBqlQueryManager>().DoAutoRegistrations();
         }

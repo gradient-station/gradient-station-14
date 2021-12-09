@@ -11,8 +11,11 @@
   - type: IconSmooth
     key: full
     base: carpet_
+  - type: Tag
+    tags: [ Carpet ]
   - type: Physics
     canCollide: false
+  - type: Fixtures
     fixtures:
     - shape:
         !type:PhysShapeAabb {}

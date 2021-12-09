@@ -11,6 +11,7 @@ ui-options-reset-all = Reset All
 ## Audio menu
 
 ui-options-master-volume = Master Volume:
+ui-options-midi-volume = MIDI (Instrument) Volume:
 ui-options-ambient-hum = Ambient Hum
 ui-options-lobby-music = Lobby Music
 ui-options-volume-label = Volume
@@ -46,6 +47,7 @@ ui-options-vp-integer-scaling-tooltip = If this option is enabled, the viewport 
                                         means that black bars appear at the top/bottom of the screen or that part
                                         of the viewport is not visible.
 ui-options-vp-low-res = Low-resolution viewport
+ui-options-fps-counter = Show FPS counter
 
 ## Controls menu
 
