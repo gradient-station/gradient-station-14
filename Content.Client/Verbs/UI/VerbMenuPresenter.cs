@@ -41,7 +41,9 @@ namespace Content.Client.Verbs.UI
         /// <summary>
         ///     Open a verb menu and fill it work verbs applicable to the given target entity.
         /// </summary>
-        public void OpenVerbMenu(EntityUid target)
+        /// <param name="target">Entity to get verbs on.</param>
+        /// <param name="force">Used to force showing all verbs (mostly for admins).</param>
+        public void OpenVerbMenu(EntityUid target, bool force = false)
         {
             if (_playerManager.LocalPlayer?.ControlledEntity is not {Valid: true} user)
                 return;
@@ -49,7 +51,7 @@ namespace Content.Client.Verbs.UI
             Close();
 
             CurrentTarget = target;
-            CurrentVerbs = _verbSystem.GetVerbs(target, user, VerbType.All);
+            CurrentVerbs = _verbSystem.GetVerbs(target, user, VerbType.All, force);
 
             if (!target.IsClientSide())
             {
@@ -170,6 +172,7 @@ namespace Content.Client.Verbs.UI
             if (element is not VerbMenuElement verbElement)
                 return;
 
+            args.Handle();
             var verb = verbElement.Verb;
 
             if (verb == null)
@@ -180,8 +183,12 @@ namespace Content.Client.Verbs.UI
                 if (verbElement.SubMenu == null || verbElement.SubMenu.ChildCount == 0)
                     return;
 
-                if (verbElement.SubMenu.MenuBody.Children.First() is not VerbMenuElement verbCategoryElement)
+                if (verbElement.SubMenu.MenuBody.ChildCount != 1
+                    || verbElement.SubMenu.MenuBody.Children.First() is not VerbMenuElement verbCategoryElement)
+                {
+                    OpenSubMenu(verbElement);
                     return;
+                }
 
                 verb = verbCategoryElement.Verb;
 
@@ -192,8 +199,6 @@ namespace Content.Client.Verbs.UI
             _verbSystem.ExecuteVerb(CurrentTarget, verb, verbElement.Type);
             if (verb.CloseMenu)
                 _verbSystem.CloseAllMenus();
-
-            args.Handle();
         }
     }
 }
